@@ -119,7 +119,7 @@ public class Configuration extends EldoConfig {
 	@Override
 	protected void saveConfigs() {
 		getMainConfig().set("generalSettings", generalSettings);
-
+		
 		for (Map.Entry<String, WorldSettings> entry : worldSettings.entrySet()) {
 			ObjUtil.nonNull(loadConfig(getWorldConfigPath(entry.getKey()), null, false),
 					configuration -> {
